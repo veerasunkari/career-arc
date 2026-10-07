@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17241f">
+  <title>Career Arc | Career guidance that moves with you</title>
+  <link rel="stylesheet" href="/css/app.css">
+  <script src="/js/app.js" defer></script>
+</head>
+<body>
+  <div id="auth-screen" class="auth-screen">
+    <section class="auth-story" aria-label="Career Arc">
+      <a class="brand brand-large" href="/" aria-label="Career Arc home"><span class="brand-mark">CA</span><span>career arc</span></a>
+      <div class="story-copy">
+        <p class="eyebrow">A clearer next step</p>
+        <h1>Your next chapter,<br><em>in focus.</em></h1>
+        <p>Bring your strengths, interests, and ambitions into one practical learning path.</p>
+      </div>
+      <div class="story-track" aria-hidden="true"><span>01&nbsp; Discover</span><i></i><span>02&nbsp; Choose</span><i></i><span>03&nbsp; Grow</span></div>
+      <span class="story-index" aria-hidden="true">CAREER GUIDANCE / LOCAL EDITION</span>
+    </section>
+    <main class="auth-panel">
+      <div class="auth-form-wrap">
+        <p class="eyebrow" id="auth-kicker">WELCOME BACK</p>
+        <h2 id="auth-heading">Sign in to your arc</h2>
+        <p class="muted" id="auth-description">Your profile and progress are right where you left them.</p>
+        <form id="login-form" class="form-stack">
+          <label>Email address<input name="email" type="email" autocomplete="username" required placeholder="you@example.com"></label>
+          <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+          <p class="form-message" id="login-message" role="alert"></p>
+          <button class="button button-dark button-wide" type="submit">Sign in <span aria-hidden="true">&#8594;</span></button>
+        </form>
+        <form id="register-form" class="form-stack hidden">
+          <label>Your name<input name="name" autocomplete="name" required maxlength="120"></label>
+          <label>Email address<input name="email" type="email" autocomplete="email" required></label>
+          <label>Create a password<input name="password" type="password" autocomplete="new-password" minlength="10" maxlength="72" required><small>Use at least 10 characters.</small></label>
+          <p class="form-message" id="register-message" role="alert"></p>
+          <button class="button button-dark button-wide" type="submit">Create student account <span aria-hidden="true">&#8594;</span></button>
+        </form>
+        <p class="auth-switch"><span id="auth-switch-copy">New to Career Arc?</span> <button id="auth-switch" class="text-button" type="button">Create an account</button></p>
+        <div class="demo-note"><span class="demo-dot"></span><span>Local presentation workspace<br><strong>Student demo is ready to explore.</strong></span></div>
+      </div>
+    </main>
+  </div>
+
+  <div id="workspace" class="workspace hidden">
+    <aside class="sidebar">
+      <a class="brand" href="#overview" aria-label="Career Arc overview"><span class="brand-mark">CA</span><span>career arc</span></a>
+      <div class="side-label">YOUR SPACE</div>
+      <nav id="navigation" class="navigation" aria-label="Main navigation"></nav>
+      <div class="sidebar-bottom">
+        <div class="local-status"><span class="status-pulse"></span><span>Local workspace<br><small>Data stays on this computer</small></span></div>
+        <button id="logout-button" class="logout-button" type="button">Sign out <span aria-hidden="true">&#8599;</span></button>
+      </div>
+    </aside>
+    <div class="app-main">
+      <header class="topbar">
+        <div class="crumb"><span>CAREER ARC</span><b>/</b><span id="crumb-current">OVERVIEW</span></div>
+        <div class="account-chip"><span id="account-initials" class="avatar">CA</span><span><strong id="account-name">Student</strong><small id="account-role">STUDENT</small></span></div>
+      </header>
+      <main id="content" class="content" tabindex="-1"></main>
+      <footer class="app-footer"><span>CAREER ARC · LOCAL PROJECT EDITION</span><span>Guidance aid, not a validated psychological assessment</span></footer>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
